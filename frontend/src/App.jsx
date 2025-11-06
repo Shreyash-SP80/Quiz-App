@@ -9,8 +9,7 @@ import MyResultPage from './pages/MyResultPage'
 // Private protected route
 function RequireAuth( {children} ) {
   const isLoggedIn = Boolean(localStorage.getItem('authToken'));
-  const location = useLocation(); // To use an Location hook
-
+  const location = useLocation();
   if (!isLoggedIn) {
     alert("You must have to login first to see your Result")
     return <Navigate to="/login" state={{from: location}} replace />
