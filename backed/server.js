@@ -12,7 +12,7 @@ const PORT = 4000
 app.use(cors())
 app.use(express.json()) 
 app.use(express.urlencoded({ extended: true }))
-
+ 
 
 // DB
 connectDB();
@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server started on: http://localhost:${PORT}`)
 })
+
 
 
 
